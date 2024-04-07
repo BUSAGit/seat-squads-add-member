@@ -1,6 +1,6 @@
 <?php
 
-namespace Helious\SeatSquadAddMember\Http\Controllers;
+namespace Helious\SeatSquadAddMember\Http\Controllers\Api\v2;
 
 use Seat\Api\Http\Controllers\Api\v2\ApiController;
 use Helious\SeatSquadAddMember\Http\Validation\SquadMember;
