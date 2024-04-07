@@ -10,7 +10,23 @@ class SquadsController extends ApiController
 {
 
     /**
-     * Add a member to a squad
+     * @OA\Post(
+     *      path="/v2/squads/{squad_id}/add-member",
+     *      tags={"Squads"},
+     *      summary="Get a list of squads",
+     *      description="Returns list of squads",
+     *      security={
+     *          {"ApiKeyAuth": {}}
+     *      },
+     *      @OA\Response(response=200, description="Successful operation",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="Member added to squad")
+     *          )
+     *     ),
+     *     @OA\Response(response=404, description="Bad request",
+     *     @OA\Response(response=4041 description="Unauthorized",
+     * )
+     * 
      * @param $squad_id
      * @return \Illuminate\Http\JsonResponse
      */
@@ -21,7 +37,7 @@ class SquadsController extends ApiController
         $squad = Squad::find($squad_id);
 
         if (!$squad)
-            return $this->error('Squad not found', 404);
+            return $this->error('Squad not found', 400);
 
         $squad->members()->attach(request('character_id'));
 
@@ -40,7 +56,7 @@ class SquadsController extends ApiController
         $squad = Squad::find($squad_id);
 
         if (!$squad)
-            return $this->error('Squad not found', 404);
+            return $this->error('Squad not found', 400);
 
         $squad->members()->detach(request('character_id'));
 
