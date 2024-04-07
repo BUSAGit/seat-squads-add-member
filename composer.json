@@ -1,0 +1,26 @@
+{
+    "name": "helious/seat-squad-add-member",
+    "type": "library",
+    "keywords": [
+        "helious",
+        "seat-squad-add-member"
+    ],
+    "authors": [
+        {
+            "name": "Helious",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Helious\\SeatSquadAddMember\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Helious\\SeatSquadAddMember\\SeatSquadsServiceProvider"
+            ]
+        }
+    }
+}
