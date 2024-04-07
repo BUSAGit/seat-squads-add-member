@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'namespace'  => 'Api',
+    'namespace' => 'Helious\SeatSquadAddMember\Http\Controllers\Api',
     'middleware' => ['api.request', 'api.auth'],
     'prefix'     => 'api',
 ], function () {
