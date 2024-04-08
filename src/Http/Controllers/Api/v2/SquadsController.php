@@ -44,7 +44,7 @@ class SquadsController extends ApiController
         if (!$squad) return response()->json('Squad not found', 400);
 
         try {
-            $squad->members()->find($character_id);
+            $squad->members()->detach($character_id);
             return response()->json('Member removed from squad');
         } catch (\Exception $e) {
             return response()->json('Member not in squad', 400);
