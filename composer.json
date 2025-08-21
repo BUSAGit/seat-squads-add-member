@@ -1,5 +1,5 @@
 {
-    "name": "helious/seat-squad-add-member",
+    "name": "busa-git/seat-squad-add-member",
     "type": "library",
     "keywords": [
         "helious",
@@ -13,13 +13,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Helious\\SeatSquadAddMember\\": "src/"
+            "busa-git\\SeatSquadAddMember\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Helious\\SeatSquadAddMember\\SeatSquadsServiceProvider"
+                "busa-git\\SeatSquadAddMember\\SeatSquadsServiceProvider"
             ]
         }
     }
