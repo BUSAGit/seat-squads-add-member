@@ -13,13 +13,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "busa-git\\SeatSquadAddMember\\": "src/"
+            "Helious\\SeatSquadAddMember\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "busa-git\\SeatSquadAddMember\\SeatSquadsServiceProvider"
+                "Helious\\SeatSquadAddMember\\SeatSquadsServiceProvider"
             ]
         }
     }
